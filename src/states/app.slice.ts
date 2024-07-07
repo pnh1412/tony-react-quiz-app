@@ -6,7 +6,8 @@ const initialState: AppState = {
   category: '',
   amount: 0,
   difficulty: '',
-  type: ''
+  type: '',
+  score: 0
 }
 
 export const appSlice = createSlice({
@@ -25,10 +26,13 @@ export const appSlice = createSlice({
     setType: (state, action: PayloadAction<string>) => {
       state.type = action.payload
     },
+    setScore: (state, action: PayloadAction<number>) => {
+      state.score = action.payload
+    },
   },
 })
 
 // Action creators are generated for each case reducer function
-export const { setCategory, setAmount, setDifficulty, setType } = appSlice.actions
+export const { setCategory, setAmount, setDifficulty, setType, setScore } = appSlice.actions
 
 export default appSlice.reducer

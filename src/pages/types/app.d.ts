@@ -3,6 +3,7 @@ export interface AppState {
   amount:  number;
   difficulty: string;
   type: string;
+  score: number;
 }
 
 export type IRootState = {
